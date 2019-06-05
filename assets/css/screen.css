@@ -142,8 +142,8 @@ body {
     background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
 }
 
-.site-header.no-cover:before,
-.site-header.no-cover:after {
+.site-header.no-image:before,
+.site-header.no-image:after {
     display: none;
 }
 
@@ -1887,7 +1887,7 @@ Usage (In Ghost editor):
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 100%;
+    width: 100%;
 }
 
 .kg-embed-card .fluid-width-video-wrapper {
@@ -1934,6 +1934,15 @@ Usage (In Ghost editor):
 .kg-image-card.kg-width-wide + .kg-gallery-card,
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
+}
+
+/* keep existing <pre> styles for code cards with captions */
+.kg-code-card {
+    min-width: 100%;
+}
+
+.kg-code-card pre {
+    margin: 0;
 }
 
 /* 8. Author Template
